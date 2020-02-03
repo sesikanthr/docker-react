@@ -4,7 +4,7 @@ services:
 
 
 before_install:
-    - docker build -t sesikanth/docker-react -f Dockerfile .
+    - docker build -t sesikanth/docker-react -f Dockerfile.dev .
 script:
     - docker run -e CI=true sesikanth/docker-react npm run test -- --coverage
 deploy:
